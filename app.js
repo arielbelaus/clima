@@ -29,9 +29,14 @@ function localizacion(latitud, longitud){
     fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitud}+${longitud}&key=2ad9e242a5f84883b65848c345984b2e`)
     .then(respuesta => respuesta.json())
     .then(data => {
+        const city = data.results[0].components.city
         const ciudad = data.results[0].components.town
         const provincia = data.results[0].components.state
-        ubicacionUI(ciudad, provincia)
+        if(typeof city === 'undefined'){
+            ubicacionUI(ciudad, provincia)
+        } else {
+            ubicacionUI(city, provincia)
+        }
     })
 }
 
@@ -253,4 +258,5 @@ function allSet(){
 
 document.addEventListener('DOMContentLoaded',estilos())
 document.addEventListener('DOMContentLoaded',posicionActual())
+
 
