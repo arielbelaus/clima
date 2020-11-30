@@ -1,5 +1,5 @@
 body{
-    background-color: #362D7C;
+    background-color: #7BD0D3;
     color: white;
     font-family: 'Nunito', sans-serif;
     margin: 0;  
@@ -12,7 +12,7 @@ body{
 
 
 #actual{
-    background-image: url('imagenes/fondo-noche.jpg');
+    background-image: url('../images/fondo-dia.jpg');
     background-position: center;
     height: 260px;
 }
@@ -55,12 +55,14 @@ body{
 
 #temperatura div p:nth-child(2){
     margin: 0;
+    background-color: rgba(196, 195, 195, 0.507);
 }
 
 #temperatura div div{
     margin-top: 2px;
     font-weight: 300;
     font-style: italic;
+    background-color: rgba(196, 195, 195, 0.507);
 }
 
 #maxMin{
@@ -83,7 +85,7 @@ body{
 .tempMin{
     font-size: 30px;
     margin-top: 15px;
-    color: #BBBBBC;
+    color: #535353;
 }
 
 .tempMin::before{
@@ -118,7 +120,7 @@ body{
 
 #extendido p:nth-child(4){
     margin-top: 0;
-    color: #BBBBBC;
+    color: #535353;
 }
 
 #infoComplementaria{
@@ -127,6 +129,7 @@ body{
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #infoComplementaria div:nth-child(1), #infoComplementaria div:nth-child(2), #infoComplementaria div:nth-child(3){
@@ -137,6 +140,7 @@ body{
     border-radius: 50px;
     width: 85px;
     font-size: 13px;
+    color: #535353;
 }
 
 #infoComplementaria div:nth-child(1) p, #infoComplementaria div:nth-child(2) p,#infoComplementaria div:nth-child(3) p{
@@ -156,6 +160,7 @@ body{
     margin-top: 15px;
     margin-left: 5px;
     margin-right: 5px;
+    color: #535353;
 }
 
 
@@ -199,72 +204,7 @@ body{
     background: #555; 
   }
 
-@media (max-width: 423px){
-    #actual{
-        height: 280px;
-    }
-
-    #temperatura img{
-        height: 95px;
-        width: 95px;
-    }
-
-    #actual header h1{
-        font-size: 20px;
-    }
-
-    #temperatura div p:nth-child(1){
-        font-size: 40px;
-    }
-
-    #temperatura div p:nth-child(2){
-        font-size: 13px;
-    }
-    
-    #temperatura div div{
-        font-size: 13px;
-    }
-
-    .tempMax{
-        font-size: 20px;
-    }
-    
-    .tempMin{
-        font-size: 20px;
-    }
-
-    #extendido{
-        font-size: 12px;
-    }
-    
-    #extendido img{
-        height: 40px;
-        width: 40px;
-    }
-
-    #infoComplementaria div:nth-child(1), #infoComplementaria div:nth-child(2), #infoComplementaria div:nth-child(3){
-        border-radius: 50px;
-        width: 80px;
-        margin-top: 10px;
-        font-size: 12px;
-    }
-
-    #infoHora h1{
-        font-size: 12px;
-    }
-    
-    #infoHora div{
-        font-size: 12px;
-    }
-    
-    #infoHora img{
-        height: 45px;
-        width: 45px;
-    }
-}
-
-
-.sk-folding-cube {
+  .sk-folding-cube {
     margin: 150px auto;
     width: 40px;
     height: 40px;
@@ -352,6 +292,70 @@ body{
     }
   }
 
+
+@media (max-width: 423px){
+    #actual{
+        height: 280px;
+    }
+
+    #temperatura img{
+        height: 95px;
+        width: 95px;
+    }
+
+    #actual header h1{
+        font-size: 20px;
+    }
+
+    #temperatura div p:nth-child(1){
+        font-size: 40px;
+    }
+
+    #temperatura div p:nth-child(2){
+        font-size: 13px;
+    }
+    
+    #temperatura div div{
+        font-size: 13px;
+    }
+
+    .tempMax{
+        font-size: 20px;
+    }
+    
+    .tempMin{
+        font-size: 20px;
+    }
+
+    #extendido{
+        font-size: 12px;
+    }
+    
+    #extendido img{
+        height: 40px;
+        width: 40px;
+    }
+
+    #infoComplementaria div:nth-child(1), #infoComplementaria div:nth-child(2), #infoComplementaria div:nth-child(3){
+        border-radius: 50px;
+        width: 80px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    #infoHora h1{
+        font-size: 12px;
+    }
+    
+    #infoHora div{
+        font-size: 12px;
+    }
+    
+    #infoHora img{
+        height: 45px;
+        width: 45px;
+    }
+}
 
 @media (max-width: 206px){
     .line{

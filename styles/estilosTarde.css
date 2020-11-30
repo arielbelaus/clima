@@ -12,7 +12,7 @@ body{
 
 
 #actual{
-    background-image: url('imagenes/fondo-afternoon.jpg');
+    background-image: url('../images/fondo-afternoon.jpg');
     background-position: center;
     height: 260px;
 }

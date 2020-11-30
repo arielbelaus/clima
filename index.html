@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles/navBar.css">
     <title>Pronóstico</title>
 </head>
-<body>
+
+<body class="notranslate">
+    <nav>
+        <div class="btn">
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div id="selectores">
+            <div>
+                <label for="provincias">Elige una provincia:</label>
+                <select name="provincias" id="provincias">
+                    <option value="default" selected>Ubicación actual</option>
+                </select>
+            </div>
+            <div>
+                <label for="municipios">Elige un municipio:</label>
+                <select name="municipios" id="municipios"></select>
+            </div>
+            <button> Ubicar <img src="images/icon-arrow.svg" alt=""></button>
+        </div>
+    </nav>
+
     <section id="actual">
         <header></header>
         <main>
@@ -66,11 +91,9 @@
         <div class="sk-cube4 sk-cube"></div>
         <div class="sk-cube3 sk-cube"></div>
     </div>
-    
-    <script src="app.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/navBar.js"></script>
 </body>
+
 </html>
-
-
-
-

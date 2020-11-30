@@ -1,0 +1,134 @@
+*:focus {
+    outline: 0;
+}
+/************************* Boton ****************************************/
+nav .btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px gray;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px gray;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(16px);
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/************************* general ****************************************/
+nav {
+    background-color: darkgray;
+    height: 55px;
+    transition: all .3s ease-in-out;
+}
+
+#selectores {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selectores div{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+#selectores select {
+    border: none;
+    border-radius: 3px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+}
+
+#selectores label{
+    margin-left: 5px;
+}
+
+#selectores div:nth-child(2) {
+    display: none;
+}
+
+button {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    box-shadow: gray 1px 1px 3px;
+    width: 150px;
+    height: 25px;
+    background-image: linear-gradient(135deg, #089DD5, #27A9DA);
+    margin-top: 25px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(135deg, #538BA0, #7EA8B8);
+}
+
+@media (max-width: 485px) {
+    #selectores select {
+        width: 100%;
+    }
+
+    button {
+        width: 50%;
+    }
+}
+
